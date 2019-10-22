@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Contact Us </title>
+</head>
+
+<body>
+
+
+<main>
+	<header><h1>Summer's End</h1> 
+	</header>
+
+<nav>
+	<hr />
+	<a href="index.html">Home </a> <a href="menu.html">Menu</a> 
+	<a href="contact.html">Contact Us</a>
+	<hr />	
+	</nav>
+
+<form action="submit.html" method="POST">
+	<label for="name">Name: </label> 
+	<input type="text" id="name" name="name"> <br />
+	<label for="email">Email: </label>
+	<input type="text" id="email" name="email"> <br />
+	<label for="phone">Phone </label>
+	<input type="text" id="phone" name="phone"><br />
+	
+	<label for="inquiry">Reason for Inquiry</label>
+	<select id="inquiry" name="inquiry">
+	<option value="catering" selected> Catering</option>
+	<option value="private">Private Party</option>
+	<option value="feedback">Feedback</option>
+	<option value="other">Other</option>
+	</select> <br /> <br/>
+
+	<label for="info">Additional Information</label>
+	<textarea id="info" name="info"></textarea>
+	<br />
+	
+	<!--Radio button for previous visit-->
+	<label for="visit">Have you been to the restaurant?</label>
+	<input type="radio" id="choice1" name="questionaire" value="no" selected>
+	<label for="choice1"> No</label>
+	<input type="radio" id="choice2" name="questionaire" value="yes">
+	<label for="choice1"> Yes</label>
+	<br />
+	
+	<!--Checkboxes for contact-->
+
+	<label for="day">Best days to contact you: </label>
+	<input type="checkbox" id="M" name="day" value="M">
+	<label for="M"> M </label>
+	<input type="checkbox" id="T" name="day" value="T">
+	<label for="T"> T </label>
+	<input type="checkbox" id="W" name="day" value="W">
+	<label for="W"> W </label>
+	<input type="checkbox" id="TH" name="day" value="TH">
+	<label for="TH"> TH </label>
+	<input type="checkbox" id="F" name="day" value="F">
+	<label for="F"> F </label>
+			<br />
+			
+	<input type ="submit" id="submit" value="Send Request">
+	
+	
+
+
+
+</main>
+
+
+<footer> 23 Westward Ave. Madison, WI. 58947-098 <br />
+			(785)465-3456
+	</footer>
+<body>
+
+
+
+
+</html>
