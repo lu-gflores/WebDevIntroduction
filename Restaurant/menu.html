@@ -1,6 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head><title>Menu</title></head>
+<head><title>Menu</title>
+<link href="restaurantStyles.css" rel="stylesheet" type="text/css">
+	<style>
+	
+		.menu {
+		text-align: center;
+		margin: auto;
+		}
+		.item {
+		font-family: arial;
+		font-size: 1.5em;
+		}
+		
+		
+	<!---styles for beverages table--->
+	.bev {
+		font-size: 3.0em;
+		font-weight: bold;
+		text-align: left;
+		padding: 10px 12 10px 12px;
+		margin: auto;
+		font-family: arial;
+		}
+	.bev, td {
+		padding: 13px;
+	}
+	.drinks {
+		width: 70%;
+		border-collapse: collapse;
+		padding: 40px 0px 12 px 0px;
+		font-family: arial;
+		margin: auto;
+		text-right:align;
+		}
+	.drinks tbody tr:nth-child(even) {
+		background-color: lemonchiffon;
+		}		
+	</style>
+
+</head>
 
 <body>
 	<main>
@@ -13,13 +52,16 @@
 	<a href="contact.html">Contact Us</a>
 	<hr />	
 	</nav>
-		<table style = "width: 50%" >
+
+		
+		<!--first section of menu-->
+	<table class= "menu">
 		
 		<!--first section of menu-->
 		<tr>
-		<th>Burger and Fries</th>
-		<th>Hot Dog and Chips</th>
-		<th>Italian Sausage and Peppers</th>
+		<th class="item">Burger and Fries</th>
+		<th class= "item">Hot Dog and Chips</th>
+		<th class= "item">Italian Sausage and Peppers</th>
 		</tr>
 		
 		<tr>
@@ -47,9 +89,9 @@
 		<!--Second row of Menu-->
 		
 		<tr>
-		<th>Tenderloin Sandwich and Chips</th>
-		<th>House Salad</th>
-		<th>Brisket Sandwich and Fries</th>
+		<th class="item">Tenderloin Sandwich and Chips</th>
+		<th class= "item">House Salad</th>
+		<th class= "item">Brisket Sandwich and Fries</th>
 		</tr>
 		
 		<tr>
@@ -73,14 +115,38 @@
 		Servered with our famouse thick-cut <br />
 		french fries<br />
 		$7.95<br />
-		</td>
+		</td>	
+	</table>
+		
+		
+	
+	
+	
+		<!---Beverages table -->
+	<table class="drinks">
+		<tr> 
+		<th class="bev"> Beverages</th>
+		</tr>
+		
+		<tr>
+		<td>Root Beer</td>
+		<td>$3.00</td>
+		</tr>
+		<tr>
+		<td>Bottled Water</td>
+		<td>$1.25</td>
+		</tr>
+		<tr>
+		<td>Lemonade</td>
+		<td>$1.00</td>
+		</tr>
+		<tr>
+		<td>Iced Tea</td>
+		<td>$1.25</td>
+	</table>
 		
 		
 		
-		
-		
-		
-		</table>
 		<hr />
 	</main>
 

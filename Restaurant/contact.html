@@ -3,6 +3,48 @@
 
 <head>
 <title>Contact Us </title>
+<link href="restaurantStyles.css" rel="stylesheet" type="text/css">
+
+	<style>
+		form {
+			text-align: center;
+	}	
+		label {
+			font-size: 1.1em;
+			font-weight: bold;
+			margin: 15px;
+			text-align: center;
+			padding: 8px 0px 8px 0px;
+		}
+		input[type=text] {
+			width: 20%;
+			padding: 8px 8px;
+			margin: 12px;
+			font-size: 1.1em;
+	}
+		textarea {
+			width: 20%;
+			height: 100px;
+			padding: 8px 8px;
+			background-color: #fff;
+			resize: none;
+			margin: auto;
+	}
+	
+		#inquiry {
+			width: 20%;
+			padding: 8px 8px;
+			margin: 12px;
+		}
+		
+		#submit {
+			width: 20%;
+			padding: 8px 8px 8px 8px;
+			margin: 12px;
+			font-size: 1.1em;
+		}
+	
+	</style>
 </head>
 
 <body>
@@ -24,10 +66,10 @@
 	<input type="text" id="name" name="name"> <br />
 	<label for="email">Email: </label>
 	<input type="text" id="email" name="email"> <br />
-	<label for="phone">Phone </label>
+	<label for="phone">Phone: </label>
 	<input type="text" id="phone" name="phone"><br />
 	
-	<label for="inquiry">Reason for Inquiry</label>
+	<label for="inquiry">Reason for Inquiry:</label>
 	<select id="inquiry" name="inquiry">
 	<option value="catering" selected> Catering</option>
 	<option value="private">Private Party</option>
@@ -35,11 +77,12 @@
 	<option value="other">Other</option>
 	</select> <br /> <br/>
 
-	<label for="info">Additional Information</label>
+	<label for="info">Additional Information:</label> </br>
 	<textarea id="info" name="info"></textarea>
 	<br />
 	
 	<!--Radio button for previous visit-->
+	
 	<label for="visit">Have you been to the restaurant?</label>
 	<input type="radio" id="choice1" name="questionaire" value="no" selected>
 	<label for="choice1"> No</label>
@@ -48,7 +91,7 @@
 	<br />
 	
 	<!--Checkboxes for contact-->
-
+	
 	<label for="day">Best days to contact you: </label>
 	<input type="checkbox" id="M" name="day" value="M">
 	<label for="M"> M </label>
@@ -61,7 +104,7 @@
 	<input type="checkbox" id="F" name="day" value="F">
 	<label for="F"> F </label>
 			<br />
-			
+	
 	<input type ="submit" id="submit" value="Send Request">
 	
 	
