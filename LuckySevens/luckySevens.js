@@ -46,8 +46,8 @@ function playGame() {
 			rolls = rolls++;
 		}
 	} while(betMoney > 0); //so long as there is money in the game, it will continue the loop
-		total = Math.max.apply(Math, maxAmount);
-		maxRolls = maxAmount.indexOf(total);
+		total = Math.max.apply(Math, maxAmount); //accepts the maxAmount and passes it as an argument
+		maxRolls = maxAmount.indexOf(total); 
 		if (maxRolls < 1) {
 			maxRolls= 0;
 		}
