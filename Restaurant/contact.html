@@ -1,30 +1,36 @@
 <!DOCTYPE html>
+<!-- 
+Name: George Flores
+Date Created: October 19, 2019
+Most recent revision: November 1, 2019
+-->
 <html>
 
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Contact Us </title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+		crossorigin="anonymous">
 <link href="restaurantStyles.css" rel="stylesheet" type="text/css">
 
+<!--Created a JavaScript file to validate information-->
+<script type= "text/JavaScript" src="restaurantContact.js"></script>
+
 	<style>
-		form {
-			text-align: center;
-	}	
-		label {
-			font-size: 1.1em;
-			font-weight: bold;
-			margin: 15px;
-			text-align: center;
-			padding: 8px 0px 8px 0px;
-		}
-		input[type=text] {
-			width: 20%;
+	label {
+		display: inline-block;
+		}	
+	
+	input[type=text] {
+			width: 50%;
 			padding: 8px 8px;
-			margin: 12px;
-			font-size: 1.1em;
+			
 	}
 		textarea {
-			width: 20%;
-			height: 100px;
+			width: 10%;
+			height: 300px;
 			padding: 8px 8px;
 			background-color: #fff;
 			resize: none;
@@ -32,9 +38,9 @@
 	}
 	
 		#inquiry {
-			width: 20%;
+			width: 45%;
 			padding: 8px 8px;
-			margin: 12px;
+			
 		}
 		
 		#submit {
@@ -43,83 +49,132 @@
 			margin: 12px;
 			font-size: 1.1em;
 		}
-	
 	</style>
 </head>
 
 <body>
+<div class="container">
 
 
-<main>
-	<header><h1>Summer's End</h1> 
+	<header class="jumbotron">
+	<h1 class= "display-4">Summer's End</h1> 
+	<p class="lead">Now opening at a new location in Madison!</p>
 	</header>
 
-<nav>
+	<nav>
 	<hr />
-	<a href="index.html">Home </a> <a href="menu.html">Menu</a> 
-	<a href="contact.html">Contact Us</a>
+	<a class="btn badge-pill" href="index.html"><img src="image/home.svg">Home </a> 
+	<a class="btn badge-pill" href="menu.html">Menu</a> 
+	<a class="btn badge-pill" href="contact.html">Contact Us</a>
 	<hr />	
 	</nav>
 
-<form action="submit.html" method="POST">
-	<label for="name">Name: </label> 
-	<input type="text" id="name" name="name"> <br />
-	<label for="email">Email: </label>
-	<input type="text" id="email" name="email"> <br />
-	<label for="phone">Phone: </label>
-	<input type="text" id="phone" name="phone"><br />
-	
-	<label for="inquiry">Reason for Inquiry:</label>
-	<select id="inquiry" name="inquiry">
-	<option value="catering" selected> Catering</option>
-	<option value="private">Private Party</option>
-	<option value="feedback">Feedback</option>
-	<option value="other">Other</option>
-	</select> <br /> <br/>
-
-	<label for="info">Additional Information:</label> </br>
-	<textarea id="info" name="info"></textarea>
-	<br />
-	
-	<!--Radio button for previous visit-->
-	
-	<label for="visit">Have you been to the restaurant?</label>
-	<input type="radio" id="choice1" name="questionaire" value="no" selected>
-	<label for="choice1"> No</label>
-	<input type="radio" id="choice2" name="questionaire" value="yes">
-	<label for="choice1"> Yes</label>
-	<br />
-	
-	<!--Checkboxes for contact-->
-	
-	<label for="day">Best days to contact you: </label>
-	<input type="checkbox" id="M" name="day" value="M">
-	<label for="M"> M </label>
-	<input type="checkbox" id="T" name="day" value="T">
-	<label for="T"> T </label>
-	<input type="checkbox" id="W" name="day" value="W">
-	<label for="W"> W </label>
-	<input type="checkbox" id="TH" name="day" value="TH">
-	<label for="TH"> TH </label>
-	<input type="checkbox" id="F" name="day" value="F">
-	<label for="F"> F </label>
+<form name="contactInfo" class="needs-validation" novalidate onsubmit="return validateContact();">
+	<div class="form-group row">
+		<label for="name" class="col-sm-2 col-form-label">Name: </label> 
+		<div class="col-sm-10">
+			<input type="text" class="form-control" id="name" name="name">
+		<div class="valid-feedback">
+        Criteria met.
+		</div>
+		<div class="invalid-feedback">
+          Please enter your name.
+        </div>
+		</div>
+	</div>
+	<div class="form-group row">
+			<label for="email" class="col-sm-2 col-form-label">Email: </label>
+		<div class = "col-sm-10">
+			<input type="text" class="form-control" id="email" name="email">
+		<div class="valid-feedback">
+        Criteria met.
+		</div>
+		</div>
+	</div>
+	<div class="form-group row">
+			<label for="phone" class="col-sm-2 col-form-label">Phone: </label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" id="phone" name="phone">
+		<div class="valid-feedback">
+        Criteria met.
+      </div>
+		</div>
+	</div>
+	<div class="form-group row">
+			<label for="inquiry" class="col-sm-2 col-form-label">Reason for Inquiry:</label>
+			<select multiple class="form-control" id="inquiry" name="inquiry">
+			<option value="catering" selected> Catering</option>
+			<option value="private">Private Party</option>
+			<option value="feedback">Feedback</option>
+			<option value="other">Other</option>
+			</select> <br /> <br/>
+	</div>
+		<div class="form-group">
+			<label for="info">Additional Information:</label> </br>
+			<textarea id="info" name="info" class="form-control"></textarea>
+		</div>
 			<br />
+			
+			<!--Radio button for previous visit-->
+		<div class="form-check form-check-inline">
+			<label for="visit" class="form-check-label">Have you been to the restaurant?</label>
+			<input type="radio" id="choice1" class="form-check-input" name="questionaire" value="no" selected>
+			<label for="choice1" class="form-check-input"> No</label>
+		</div>
+		<div class="form-check form-check-inline">
+			
+			<input type="radio" id="choice2" class="form-check-input" name="questionaire" value="yes">
+			<label for="choice1" class="form-check"> Yes</label>
+		</div>
+			<br />
+			
+			<!--Checkboxes for contact-->
+		
+		<label for="day" class="form-check-label">Best days to contact you: </label>
+			
+		<div class="form-check form-check-inline">	
+			<input type="checkbox" id="M" name="day" value="M" class="form-check-input">
+			<label for="M" class="form-check-label"> M </label>
+		</div>
+		<div class="form-check form-check-inline">	
+			<input type="checkbox" id="T" name="day" value="T" class="form-check-input">
+			<label for="T" class="form-check-label"> T </label>
+		</div>
+		<div class="form-check form-check-inline">	
+			<input type="checkbox" id="W" name="day" value="W">
+			<label for="W" class="form-check-label"> W </label>
+		</div>
+		<div class="form-check form-check-inline">	
+			<input type="checkbox" id="TH" name="day" value="TH" class="form-check-input">
+			<label for="TH" class="form-check-label"> TH </label>
+		</div>
+		<div class="form-check form-check-inline">	
+			<input type="checkbox" id="F" name="day" value="F" class="form-check-input">
+			<label for="F" class="form-check-label"> F </label>
+		</div>
+					<br />
+			
+	<div class="form-group row">
+		<div class="col-sm-10">
+	<button type="submit" id="submitButton" class="btn btn-primary">Send Request</button>
+		</div>
+	</div>
+
+	<!---- <input type ="submit" id="submit" value="Send Request"> -->
 	
-	<input type ="submit" id="submit" value="Send Request">
-	
-	
+</form>	
 
 
 
-</main>
 
 
 <footer> 23 Westward Ave. Madison, WI. 58947-098 <br />
 			(785)465-3456
 	</footer>
-<body>
 
-
-
-
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>	
+</div>
+</body>
 </html>
